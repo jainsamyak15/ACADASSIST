@@ -87,8 +87,20 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(135deg, #3498db, #8e44ad);
+    background: radial-gradient(black 55%, #0000),linear-gradient(
+        135deg,
+        red,
+        orange,
+        yellow,
+        lime,
+        cyan,
+        blue,
+        indigo,
+        deeppink
+      );
+      
     color: #fff;
+    /* background-size: 100% 0.5%, contain; */
     
 
     
