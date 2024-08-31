@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    transition: all 0.3s ease;
+    padding: 1rem 5%;
+    background-color: #000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header.dock {
+    padding: 0.5rem 5%; /* Smaller padding */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* Increased shadow for the dock effect */
+    background-color: #3498db; /* Optional: Change color to blend with the theme */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    transition: all 0.3s ease;
+    
+}
+
+nav.shrink {
+    font-size: 0.9rem; /* Smaller font size when docked */
+}
+
+.logo {
+    font-size: 1.2rem; /* Adjust logo size if needed */
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+a {
+    text-decoration: none; /* Ensure no underline for all links */
+}
+
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+section {
+    padding: 5rem 10%;
+    
+}
+
+#hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    color: #fff;
+
+    
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.university-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    
+}
+
+.university-logos img {
+    max-width: 150px;
+    margin: 20px;
+    
+    
+}
+
+.program-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.program-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 2rem;
+    width: calc(33.333% - 2rem);
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+}
+
+.program-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #3498db;
+}
+
+.program-card ul {
+    list-style-type: none;
+    margin-bottom: 1.5rem;
+}
+
+.program-card li {
+    margin-bottom: 0.5rem;
+}
+
+.enroll-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.enroll-button:hover {
+    background-color: #2980b9;
+}
+
+#features ul {
+    list-style-type: none;
+    margin-top: 1rem;
+}
+
+#features li {
+    margin-bottom: 1rem;
+}
+
+#newsletter form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#newsletter input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#newsletter button {
+    padding: 0.5rem 1rem;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#newsletter button:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 3rem 10%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #555;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .program-card {
+        width: 100%;
+    }
+}
+
+#testimonials {
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    border: none;
+    position: relative;
+    
+}
+
+.marquee {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+    
+}
+
+.marquee-content {
+    display: flex;
+    gap: 20px;
+    
+}
+
+.review-card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #fafafa;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.review-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.review-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-name {
+    font-weight: bold;
+}
+
+.review-username {
+    color: #888;
+}
+
+.review-body {
+    margin-top: 5px;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.reveal {
+    position: relative;
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    opacity: 1;
+}
+
+.reveal.fade-bottom {
+    transform: translateY(50px);
+}
+
+.reveal.fade-bottom.active {
+    transform: translateY(0);
+}
+
+.reveal.fade-left {
+    transform: translateX(-100px);
+}
+
+.reveal.fade-left.active {
+    transform: translateX(0);
+}
+
+.reveal.fade-right {
+    transform: translateX(100px);
+}
+
+.reveal.fade-right.active {
+    transform: translateX(0);
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.contact-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-content h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #1f2937;
+}
+
+.contact-content p {
+    font-size: 18px;
+    color: #4b5563;
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+    background-color: #f9fafb;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form input, form textarea, form select {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #d1d5db;
+    font-size: 16px;
+    color: #374151;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus, form select:focus {
+    border-color: #3b82f6;
+}
+
+form button {
+    padding: 15px;
+    background-color: #3b82f6;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #2563eb;
+}
+
+.contact-info {
+    margin-top: 50px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #4b5563;
+    margin-bottom: 10px;
+}
+
+/* Services Section */
+#services {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+    color: #1f2937;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background-color: #3b82f6;
+    display: block;
+    margin: 10px auto 0;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.service {
+    background-color: #f9fafb;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: calc(50% - 40px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+.service p {
+    color: #6b7280;
+    font-size: 16px;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+/* FAQ Section Styles */
+.faq-section {
+    padding: 60px 20px;
+    background: #ffffff; /* White background for minimalistic look */
+    color: #000000; /* Black text color */
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333333; /* Dark gray for better readability */
+    display: block;
+}
+.faq-item {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: left;
+    border: 1px solid #e0e0e0; /* Light gray border for separation */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    overflow: hidden; /* Ensures content does not overflow */
+    margin-bottom: 10px; /* Spacing between items */
+}
+
+.faq-question {
+    background: #f5f5f5; /* Light gray background for questions */
+    color: #000000; /* Black text color */
+    border: none;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-bottom: 1px solid #e0e0e0; /* Light gray border for separation */
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #e0e0e0; /* Slightly darker gray on hover */
+}
+
+.faq-answer {
+    max-height: 0; /* Initially hidden */
+    overflow: hidden; /* Hide overflow */
+    padding: 0 15px; /* Add padding for content inside */
+    opacity: 0; /* Initially hidden */
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease; /* Smooth transition */
+    display: none;
+}
+
+.faq-answer.show {
+    max-height: 200px; /* Adjust as needed */
+    opacity: 1; /* Visible */
+    padding: 15px; /* Add padding when visible */
+    display: block;
+
+    
+}
+
+.faq-answer p {
+    margin: 0;
+}
+.faq-answer {
+    display: none; /* Hide the answers by default */
+}
+
+.faq-answer.show {
+    display: block; /* Show the answer when the .show class is added */
+}
+
