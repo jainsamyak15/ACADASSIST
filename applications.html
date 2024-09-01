@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Abroad Application Services</title>
+    <link rel="stylesheet" href="applications.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating { animation: float 3s ease-in-out infinite; }
+        .flip-card {
+            perspective: 1000px;
+            transform-style: preserve-3d;
+        }
+        .flip-card-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            backface-visibility: hidden;
+        }
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-blue-100 to-purple-100 font-sans">
+    <header>
+        <nav>
+            <div class="logo">Academic Assistant</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="mentorship.html">Mentorship</a></li>
+                <li><a href="applications.html" class="active">Applications</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Your Journey to Study Abroad Starts Here</h1>
+            <p>We guide you through every step of your application process</p>
+            <a href="#services" class="cta-button">Explore Our Services</a>
+        </section>
+
+        <section id="services" class="container mx-auto px-6 py-16">
+            <h2 class="text-4xl font-bold mb-8 text-center text-gray-800">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flip-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front p-6">
+                            <h3 class="text-2xl font-semibold mb-4 text-gray-800">Profile Building</h3>
+                            <p class="text-gray-600">Craft a compelling student profile that stands out to admissions committees.</p>
+                        </div>
+                        <div class="flip-card-back p-6 bg-blue-600 text-white">
+                            <h3 class="text-2xl font-semibold mb-4">Profile Building</h3>
+                            <ul class="list-disc list-inside">
+                                <li>Personal statement assistance</li>
+                                <li>Resume/CV optimization</li>
+                                <li>Extracurricular activity highlighting</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front p-6">
+                            <h3 class="text-2xl font-semibold mb-4 text-gray-800">Application Assistance</h3>
+                            <p class="text-gray-600">Get expert help with your college applications and increase your chances of admission.</p>
+                        </div>
+                        <div class="flip-card-back p-6 bg-green-600 text-white">
+                            <h3 class="text-2xl font-semibold mb-4">Application Assistance</h3>
+                            <ul class="list-disc list-inside">
+                                <li>University selection guidance</li>
+                                <li>Application form review</li>
+                                <li>Essay editing and feedback</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front p-6">
+                            <h3 class="text-2xl font-semibold mb-4 text-gray-800">Visa Support</h3>
+                            <p class="text-gray-600">Navigate the visa application process with confidence and ease.</p>
+                        </div>
+                        <div class="flip-card-back p-6 bg-purple-600 text-white">
+                            <h3 class="text-2xl font-semibold mb-4">Visa Support</h3>
+                            <ul class="list-disc list-inside">
+                                <li>Document preparation assistance</li>
+                                <li>Interview preparation</li>
+                                <li>Visa application review</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="timeline" class="container mx-auto px-6 py-16">
+            <h2 class="text-4xl font-bold mb-8 text-center text-gray-800">Your Journey Timeline</h2>
+            <div class="relative wrap overflow-hidden p-10 h-full">
+                <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
+                <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-blue-600 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
+                    </div>
+                    <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                        <h3 class="mb-3 font-bold text-gray-800 text-xl">Profile Building</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-600">We help you create a standout profile that showcases your strengths and achievements.</p>
+                    </div>
+                </div>
+                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-green-600 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
+                    </div>
+                    <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                        <h3 class="mb-3 font-bold text-gray-800 text-xl">University Selection</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-600">Our experts guide you in choosing the best universities that align with your goals and profile.</p>
+                    </div>
+                </div>
+                <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-purple-600 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
+                    </div>
+                    <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                        <h3 class="mb-3 font-bold text-gray-800 text-xl">Application Submission</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-600">We assist you in preparing and submitting flawless applications to your chosen universities.</p>
+                    </div>
+                </div>
+                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-red-600 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto text-white font-semibold text-lg">4</h1>
+                    </div>
+                    <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                        <h3 class="mb-3 font-bold text-gray-800 text-xl">Visa Process</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-600">Our team provides comprehensive support throughout the visa application process.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="container mx-auto px-6 py-16">
+            <h2 class="text-4xl font-bold mb-8 text-center text-gray-800">Latest Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/200" alt="Blog post image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">How to Write a Compelling SOP</h3>
+                        <p class="text-gray-600 mb-4">Learn the key elements of a strong Statement of Purpose and how to make yours stand out.</p>
+                        <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/200" alt="Blog post image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Top Universities for Computer Science</h3>
+                        <p class="text-gray-600 mb-4">Discover the best institutions worldwide for pursuing a degree in Computer Science.</p>
+                        <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/200" alt="Blog post image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Securing Strong Letters of Recommendation</h3>
+                        <p class="text-gray-600 mb-4">Tips and strategies for obtaining impactful recommendation letters for your applications.</p>
+                        <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container mx-auto px-6 py-16">
+            <h2 class="text-4xl font-bold mb-8 text-center text-gray-800">Get in Touch</h2>
+            <div class="max-w-lg mx-auto">
+                <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                            Name
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Your Name">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                            Email
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Your Email">
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+                            Message
+                        </label>
+                        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" placeholder="Your Message" rows="4"></textarea>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="mentorship.html">Mentorship</a></li>
+                    <li><a href="applications.html">Applications</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@acadassist.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <ul>
+                    <li><a href="contact.html">Reach Out To Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Acad Assist. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="applications.js"></script>
+</body>
+</html>
