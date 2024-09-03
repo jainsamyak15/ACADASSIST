@@ -133,3 +133,79 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const scholarshipData = [
+        {
+            title: "Global Leadership Scholarship",
+            amount: "$10,000",
+            description: "For students demonstrating exceptional leadership skills and global awareness.",
+            icon: "fas fa-globe-americas"
+        },
+        {
+            title: "STEM Excellence Award",
+            amount: "$15,000",
+            description: "Supporting future innovators in Science, Technology, Engineering, and Mathematics.",
+            icon: "fas fa-atom"
+        },
+        {
+            title: "Arts & Humanities Grant",
+            amount: "$8,000",
+            description: "Empowering creative minds to shape the future of arts and culture.",
+            icon: "fas fa-palette"
+        },
+        {
+            title: "Environmental Sustainability Scholarship",
+            amount: "$12,000",
+            description: "For students committed to developing solutions for a sustainable future.",
+            icon: "fas fa-leaf"
+        },
+        {
+            title: "Diversity in Tech Scholarship",
+            amount: "$20,000",
+            description: "Promoting diversity and inclusion in the technology sector.",
+            icon: "fas fa-laptop-code"
+        },
+        {
+            title: "Future Entrepreneurs Fund",
+            amount: "$18,000",
+            description: "Supporting aspiring entrepreneurs with innovative business ideas.",
+            icon: "fas fa-lightbulb"
+        }
+    ];
+
+    const scholarshipGrid = document.querySelector('.scholarship-grid');
+
+    scholarshipData.forEach((scholarship, index) => {
+        const card = document.createElement('div');
+        card.className = 'scholarship-card';
+        card.style.animationDelay = `${index * 0.1}s`;
+
+        card.innerHTML = `
+            <div class="card-front">
+                <i class="${scholarship.icon} scholarship-icon"></i>
+                <h2 class="scholarship-title">${scholarship.title}</h2>
+                <div class="scholarship-amount">${scholarship.amount}</div>
+            </div>
+            <div class="card-back">
+                <p class="scholarship-description">${scholarship.description}</p>
+                <a href="#" class="apply-button">Apply Now</a>
+            </div>
+        `;
+
+        scholarshipGrid.appendChild(card);
+    });
+
+    // Add hover effect to cards
+    const cards = document.querySelectorAll('.scholarship-card');
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+        });
+    });
+});

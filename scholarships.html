@@ -3,107 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scholarships - Resources</title>
-    <link rel="stylesheet" href="resources.css">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Scholarships | Academic Assistant</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="scholarship.css">
+    
 </head>
-<body>
-
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="index.html" class="logo">YourBrand</a>
-            <ul class="nav-links">
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <header>
+        <nav>
+            <div class="logo">Academic Assistant</div>
+            <ul>
                 <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Resources <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="hackathons.html">Hackathons</a>
-                        <a href="internships.html">Internships</a>
-                        <a href="scholarships.html">Scholarships</a>
-                    </div>
+                <li><a href="about.html">About</a></li>
+                <li><a href="mentorship.html">Mentorship</a></li>
+                <li><a href="applications.html">Applications</a></li>
+                <li class="relative">
+                    <button id="resourcesDropdown" aria-haspopup="true" aria-expanded="false">
+                        Resources <i class="fas fa-chevron-down ml-1"></i>
+                    </button>
+                    <ul id="resourcesMenu" class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                        <li><a href="hackathons.html" class="dropdown-item">Hackathons</a></li>
+                        <li><a href="#" class="dropdown-item">Internships</a></li>
+                        <li><a href="scholarships.html" class="dropdown-item">Scholarships</a></li>
+                    </ul>
                 </li>
-                <li><a href="#">Contact</a></li>
             </ul>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Scholarships</h1>
+            <p>Discover scholarships to fund your education!</p>
+            <a href="#scholarships" class="cta-button">Explore Scholarships</a>
+        </section>
+        
+    <div class="container mx-auto px-4 py-12">
+        <h2 class="text-5xl font-extrabold mb-8 text-center text-gradient animate-fade-in-down">Upcoming Scholarships</h2>
+        
+        <div class="scholarship-grid">
+            <!-- Scholarship cards will be dynamically inserted here -->
         </div>
-    </nav>
-
-    <!-- Scholarships Section -->
-    <section class="resource-section">
-        <h2 class="section-title">Available Scholarships</h2>
-        <div class="card-container">
-            
-            <!-- Card 1 -->
-            <div class="card">
-                <div class="card-header scholarship-bg1">
-                    <div class="card-overlay">
-                        <h3>Fulbright Scholarship</h3>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p>International exchange program for study and research abroad.</p>
-                    <a href="#" class="card-button">View Details</a>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="card">
-                <div class="card-header scholarship-bg2">
-                    <div class="card-overlay">
-                        <h3>Rhodes Scholarship</h3>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p>Fully-funded postgraduate award to study at the University of Oxford.</p>
-                    <a href="#" class="card-button">View Details</a>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="card">
-                <div class="card-header scholarship-bg3">
-                    <div class="card-overlay">
-                        <h3>Gates Cambridge Scholarship</h3>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p>Full-cost award for graduate study and research at Cambridge University.</p>
-                    <a href="#" class="card-button">View Details</a>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="card">
-                <div class="card-header scholarship-bg4">
-                    <div class="card-overlay">
-                        <h3>DAAD Scholarship</h3>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p>German Academic Exchange Service offering various scholarships.</p>
-                    <a href="#" class="card-button">View Details</a>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="card">
-                <div class="card-header scholarship-bg5">
-                    <div class="card-overlay">
-                        <h3>Chevening Scholarship</h3>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p>UK government’s global scholarship program for future leaders.</p>
-                    <a href="#" class="card-button">View Details</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
+    </main>
 
     <script src="resources.js"></script>
 </body>
