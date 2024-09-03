@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathons | Academic Assistant</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="hackathons.css">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <header>
+        <nav>
+            <div class="logo">Academic Assistant</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="mentorship.html">Mentorship</a></li>
+                <li><a href="applications.html">Applications</a></li>
+                <li class="relative">
+                    <button id="resourcesDropdown" aria-haspopup="true" aria-expanded="false">
+                        Resources <i class="fas fa-chevron-down ml-1"></i>
+                    </button>
+                    <ul id="resourcesMenu" class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                        <li><a href="hackathons.html" class="dropdown-item">Hackathons</a></li>
+                        <li><a href="#" class="dropdown-item">Internships</a></li>
+                        <li><a href="#" class="dropdown-item">Scholarships</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Hackathons</h1>
+            <p>Discover exciting coding challenges and showcase your skills!</p>
+            <a href="#hackathons" class="cta-button">Explore Hackathons</a>
+        </section>
+
+        <section id="hackathons">
+            <h2 class="text-5xl font-extrabold mb-8 text-center text-gradient animate-fade-in-down">Upcoming Hackathons</h2>
+            <div id="hackathon-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Hackathon cards will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="resources.js"></script>
+</body>
+</html>
