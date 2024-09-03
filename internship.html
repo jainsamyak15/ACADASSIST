@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Opportunities</title>
+    <link rel="stylesheet" href="internship.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Academic Assistant</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="mentorship.html">Mentorship</a></li>
+                <li><a href="applications.html">Applications</a></li>
+                <li class="relative">
+                    <button id="resourcesDropdown" aria-haspopup="true" aria-expanded="false">
+                        Resources <i class="fas fa-chevron-down ml-1"></i>
+                    </button>
+                    <ul id="resourcesMenu" class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                        <li><a href="hackathons.html" class="dropdown-item">Hackathons</a></li>
+                        <li><a href="internship.html" class="dropdown-item">Internships</a></li>
+                        <li><a href="scholarships.html" class="dropdown-item">Scholarships</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Internships</h1>
+            <p>Explore internship opportunities to gain valuable work experience!</p>
+            <a href="#industrial" class="cta-button">Explore Internships</a>
+        </section>
+        
+
+    <main>
+        <section id="industrial" class="internship-section">
+            <h2 style="font-size: 30px; font-weight: bold; margin-bottom: 50px;">Industrial Internships</h2>
+            <div class="carousel-container">
+                <button class="carousel-button prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-800 font-bold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <div class="internship-carousel">
+                    <div class="book">
+                        <div class="cover">
+                            <h3>UX Design Intern</h3>
+                            <p><strong>Company:</strong> DesignMasters Studio</p>
+                            <p><strong>Location:</strong> Seattle, WA</p>
+                            <p><strong>Duration:</strong> 4 months</p>
+                            <p><strong>Stipend:</strong> $4000/month</p>
+                            <a href="#" class="btn">Apply Now</a>
+                        </div>
+                        <div class="content">
+                            <h3>UX Design Intern</h3>
+                            <p>Create intuitive and beautiful user experiences for our products. You'll conduct user research, create wireframes and prototypes, and collaborate with cross-functional teams.</p>
+                            <a href="#" class="btn">Apply Now</a>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <div class="cover">
+                            <h3>UX Design Intern</h3>
+                            <p><strong>Company:</strong> DesignMasters Studio</p>
+                            <p><strong>Location:</strong> Seattle, WA</p>
+                            <p><strong>Duration:</strong> 4 months</p>
+                            <p><strong>Stipend:</strong> $4000/month</p>
+                            <a href="#" class="btn">Apply Now</a>
+                        </div>
+                        <div class="content">
+                            <h3>UX Design Intern</h3>
+                            <p>Create intuitive and beautiful user experiences for our products. You'll conduct user research, create wireframes and prototypes, and collaborate with cross-functional teams.</p>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <div class="cover">
+                            <h3>UX Design Intern</h3>
+                            <p><strong>Company:</strong> DesignMasters Studio</p>
+                            <p><strong>Location:</strong> Seattle, WA</p>
+                            <p><strong>Duration:</strong> 4 months</p>
+                            <p><strong>Stipend:</strong> $4000/month</p>
+                            <a href="#" class="btn">Apply Now</a>
+                        </div>
+                        <div class="content">
+                            <h3>UX Design Intern</h3>
+                            <p>Create intuitive and beautiful user experiences for our products. You'll conduct user research, create wireframes and prototypes, and collaborate with cross-functional teams.</p>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <div class="content">
+                            <h3>AI Research Intern</h3>
+                            <p>Contribute to groundbreaking research in artificial intelligence. You'll work on cutting-edge AI models, implement and test algorithms, and potentially contribute to academic publications.</p>
+                        </div>
+                        <div class="cover">
+                            <h3>AI Research Intern</h3>
+                            <p><strong>Company:</strong> AI Frontiers Lab</p>
+                            <p><strong>Location:</strong> Boston, MA</p>
+                            <p><strong>Duration:</strong> 6 months</p>
+                            <p><strong>Stipend:</strong> $5500/month</p>
+                            <a href="#" class="btn">Apply Now</a>
+                        </div>
+                    </div>
+                    <!-- Repeat the .book structure for additional cards -->
+                </div>
+                <button class="carousel-button next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-800 font-bold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+           
+        </section>
+        
+
+        <section id="research" class="internship-section">
+            <h2 style="font-size: 30px; font-weight: bold; margin-bottom: 50px;">Research Internships</h2>
+            <div class="carousel-container">
+                <button class="carousel-button prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-800 font-bold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                
+                <div class="internship-carousel">
+                    <div class="book">
+                        <div class="cover">
+                            <h3>Research Internship 1</h3>
+                            <p><strong>Company:</strong> Research Labs</p>
+                            <p><strong>Location:</strong> Boston, MA</p>
+                            <p><strong>Duration:</strong> 6 months</p>
+                            <p><strong>Stipend:</strong> $3000/month</p>
+                            <a href="#" class="btn">Apply Now</a>
+                        </div>
+                        <div class="content">
+                            <h3>Research Internship 1</h3>
+                            <p>Participate in groundbreaking research in the field of AI. You'll assist in data analysis, literature review, and experimental design.</p>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <div class="cover">
+                            <h3>Research Internship 2</h3>
+                            <p><strong>Company:</strong> BioTech Research</p>
+                            <p><strong>Location:</strong> San Francisco, CA</p>
+                            <p><strong>Duration:</strong> 4 months</p>
+                            <p><strong>Stipend:</strong> $3500/month</p>
+                            <a href="#" class="btn">Apply Now</a>
+                        </div>
+                        <div class="content">
+                            <h3>Research Internship 2</h3>
+                            <p>Work on innovative biotechnology projects. You'll be involved in experimental procedures, data collection, and reporting.</p>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <div class="cover">
+                            <h3>Research Internship 3</h3>
+                            <p><strong>Company:</strong> Quantum Computing Lab</p>
+                            <p><strong>Location:</strong> New York, NY</p>
+                            <p><strong>Duration:</strong> 5 months</p>
+                            <p><strong>Stipend:</strong> $4000/month</p>
+                            <a href="#" class="btn">Apply Now</a>
+                        </div>
+                        <div class="content">
+                            <h3>Research Internship 3</h3>
+                            <p>Contribute to research in quantum computing. Responsibilities include simulations, data analysis, and assisting with experiments.</p>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <div class="cover">
+                            <h3>Research Internship 3</h3>
+                            <p><strong>Company:</strong> Quantum Computing Lab</p>
+                            <p><strong>Location:</strong> New York, NY</p>
+                            <p><strong>Duration:</strong> 5 months</p>
+                            <p><strong>Stipend:</strong> $4000/month</p>
+                            <a href="#" class="btn">Apply Now</a>
+                        </div>
+                        <div class="content">
+                            <h3>Research Internship 3</h3>
+                            <p>Contribute to research in quantum computing. Responsibilities include simulations, data analysis, and assisting with experiments.</p>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <div class="cover">
+                            <h3>Research Internship 3</h3>
+                            <p><strong>Company:</strong> Quantum Computing Lab</p>
+                            <p><strong>Location:</strong> New York, NY</p>
+                            <p><strong>Duration:</strong> 5 months</p>
+                            <p><strong>Stipend:</strong> $4000/month</p>
+                            <a href="#" class="btn">Apply Now</a>
+                        </div>
+                        <div class="content">
+                            <h3>Research Internship 3</h3>
+                            <p>Contribute to research in quantum computing. Responsibilities include simulations, data analysis, and assisting with experiments.</p>
+                        </div>
+                    </div>
+                    <!-- Add more research internships as needed -->
+                </div>
+                <button class="carousel-button next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-800 font-bold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+                
+            </div>
+            
+            
+        </section>
+    </main>
+
+    <!-- <footer>
+        <p>&copy; 2024 Internship Opportunities. All rights reserved.</p>
+    </footer> -->
+
+    <script src="resources.js"></script>
+</body>
+</html>

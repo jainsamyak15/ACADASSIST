@@ -209,3 +209,72 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Initialize GSAP ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+
+// Animate header on page load
+// gsap.from('header', {
+//     y: -100,
+//     opacity: 0,
+//     duration: 1,
+//     ease: 'power3.out'
+// });
+
+// // Animate navigation links
+// gsap.from('nav ul li', {
+//     opacity: 0,
+//     y: 20,
+//     stagger: 0.2,
+//     duration: 0.8,
+//     ease: 'power3.out',
+//     delay: 0.5
+// });
+
+// Animate book cards on scroll
+gsap.utils.toArray('.book').forEach((book, index) => {
+    gsap.from(book, {
+        scrollTrigger: {
+            trigger: book,
+            start: 'top bottom-=100',
+            toggleActions: 'play none none reverse'
+        },
+        opacity: 0,
+        y: 50,
+        rotation: 5,
+        duration: 0.8,
+        ease: 'power3.out',
+        delay: index * 0.1
+    });
+});
+
+// Function to initialize a carousel
+function initializeCarousel(carouselContainer) {
+    const internshipCarousel = carouselContainer.querySelector('.internship-carousel');
+    const prevButton = carouselContainer.querySelector('.carousel-button.prev');
+    const nextButton = carouselContainer.querySelector('.carousel-button.next');
+    let currentIndex = 0;
+
+    function updateCarouselPosition() {
+        const cardWidth = carouselContainer.querySelector('.book').offsetWidth + 20; // Including the margin
+        internshipCarousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+
+    nextButton.addEventListener('click', () => {
+        const totalCards = carouselContainer.querySelectorAll('.book').length;
+        if (currentIndex < totalCards - 3) { // Ensure we don't go past the last visible card
+            currentIndex++;
+            updateCarouselPosition();
+        }
+    });
+
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarouselPosition();
+        }
+    });
+}
+
+// Initialize both carousels
+document.querySelectorAll('.carousel-container').forEach(initializeCarousel);
