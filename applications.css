@@ -512,12 +512,31 @@ h2:hover span {
 .hover\:shadow-2xl:hover {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
+#profile-building {
+    background: linear-gradient(135deg, #e6f2ff, #e6f2ff);
+    color: var(--text-dark);
+  }
+  #profile-building .bg-white {
+    background-color: white;
+    background-opacity: 1; /* Ensure full opacity */
+    color: var(--text-dark); /* Ensure text color is still readable */
+    border-radius: 20px; /* Optional: Add some styling to the cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    padding: 1rem; /* Optional: Add some padding */
+}
+#profile-building p {
+    color: #333;
+}
 
 #application-assistance {
-  background-image: url('data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0 0h20L0 20z" fill="%239C92AC" fill-opacity="0.4" fill-rule="evenodd"/%3E%3C/svg%3E'),
-                    linear-gradient(to right, #f3f4f6, #e5e7eb);
+  background: linear-gradient(135deg, #f0f4f8, #e1eaf5);
+  color: #333;
   background-size: 20px 20px, 100% 100%;
 }
+#paid-services {
+    background: linear-gradient(135deg, #f4f4f4, #e8e8e8);
+    color: var(--text-dark);
+  }
 
 .text-purple-600 {
   background: linear-gradient(to right, #8b5cf6, #6366f1);
@@ -527,6 +546,7 @@ h2:hover span {
 }
 
 #paid-services .bg-opacity-10 {
+  background-color: #fff;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
