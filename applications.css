@@ -518,7 +518,7 @@ h2:hover span {
   }
   #profile-building .bg-white {
     background-color: white;
-    background-opacity: 1; /* Ensure full opacity */
+    /* background-opacity: 1; Ensure full opacity */
     color: var(--text-dark); /* Ensure text color is still readable */
     border-radius: 20px; /* Optional: Add some styling to the cards */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
