@@ -260,8 +260,9 @@
   }
   
   .rounded {
-    border-radius: 5px;
-    
+    border-radius: 15px;
+    width: 600px;
+    height: 400px;
   }
   
   .mb-4 {
