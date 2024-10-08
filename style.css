@@ -599,3 +599,178 @@ h2::after {
     display: block; /* Show the answer when the .show class is added */
 }
 
+/* added for mobile responsiveness */
+
+/* Mobile Navigation Styles */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 1200px) {
+    section {
+        padding: 4rem 5%;
+    }
+    
+    .services-container {
+        gap: 15px;
+    }
+    
+    .service {
+        width: calc(50% - 20px);
+    }
+    
+    .program-card {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .footer-content {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    .footer-section {
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    
+    nav {
+        position: relative;
+    }
+    
+    nav ul {
+        display: none;
+        position: absolute; 
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        flex-direction: column;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    
+    nav ul.active {
+        display: flex;
+    }
+    
+    nav ul li {
+        margin: 0.8rem 0;
+    }
+    
+    .service {
+        width: 100%;
+    }
+    
+    .program-card {
+        width: 100%;
+    }
+    
+    .marquee-container {
+        padding: 10px;
+    }
+    
+    .university-logos img {
+        max-width: 100px;
+        margin: 10px;
+    }
+    
+    #newsletter form {
+        flex-direction: column;
+    }
+    
+    .footer-section {
+        flex: 0 0 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #hero h1 {
+        font-size: 2rem;
+    }
+    
+    #hero p {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .service h3 {
+        font-size: 1.3rem;
+    }
+    
+    .faq-question {
+        font-size: 1rem;
+        padding: 12px;
+    }
+    
+    .contact-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    form {
+        padding: 20px;
+    }
+    
+    form input, form textarea, form select {
+        padding: 12px;
+    }
+    
+    .review-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .review-card img {
+        margin: 0 0 10px 0;
+    }
+}
+
+/* Preserve Animations */
+@media (prefers-reduced-motion: no-preference) {
+    .reveal {
+        transition: 1s all ease;
+    }
+    
+    .marquee {
+        animation: marquee 20s linear infinite;
+    }
+}
+
+/* Performance Optimizations for Mobile */
+@media screen and (max-width: 768px) {
+    .service,
+    .program-card {
+        transform: none !important;
+        transition: box-shadow 0.3s ease;
+    }
+    
+    .reveal {
+        opacity: 1;
+        transform: none !important;
+    }
+}
