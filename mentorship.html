@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Mentorship - Acad Assist</title>
     <link rel="stylesheet" href="mentorship.css">
+    <link rel="stylesheet" href="components/Navbar.css">
     <style>
         a {
             text-decoration: none;
@@ -14,20 +15,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">
-                <div class="logo">Academic Assistant</div>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-logo">
+                Academic Assistant
             </a>
-            <ul>
-                <!-- <li><a href="index.html">Home</a></li> -->
-                <li><a href="about.html">About</a></li>
-                <li><a href="mentorship.html" class="active">Mentorship</a></li>
-                <li><a href="applications.html">Applications</a></li>
-                <li><a href="resources.html">Resources</a></li>
-            </ul>
-        </nav>
-    </header>
+            <button class="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="navbar-links">
+                <a href="/about.html" class="nav-link">About</a>
+                <a href="/mentorship.html" class="nav-link">Mentorship</a>
+                <a href="/applications.html" class="nav-link">Applications</a>
+                <div class="navbar-dropdown">
+                    <a href="/resources.html" class="nav-link">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="/hackathons.html" class="dropdown-item">Hackathons</a>
+                        <a href="/internship.html" class="dropdown-item">Internships</a>
+                        <a href="/scholarships.html" class="dropdown-item">Scholarships</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <main>
         <section id="hero">
@@ -249,5 +259,6 @@
         </div>
     </footer>
     <script src="mentorship.js"></script>
+    <script src="components/Navbar.js"></script>
 </body>
 </html>

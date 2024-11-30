@@ -5,26 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Assistant</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="components/Navbar.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 <body>
-    
-    <header id="navbar">
-        <nav>
-            <a href="index.html">
-                <div class="logo">Academic Assistant</div>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-logo">
+                Academic Assistant
             </a>
-            <button class="nav-toggle">☰</button>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="mentorship.html">Mentorship</a></li>
-                <li><a href="applications.html">Applications</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                
-            </ul>
-        </nav>
-    </header>
+            <button class="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="navbar-links">
+                <a href="/about.html" class="nav-link">About</a>
+                <a href="/mentorship.html" class="nav-link">Mentorship</a>
+                <a href="/applications.html" class="nav-link">Applications</a>
+                <div class="navbar-dropdown">
+                    <a href="/resources.html" class="nav-link">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="/hackathons.html" class="dropdown-item">Hackathons</a>
+                        <a href="/internship.html" class="dropdown-item">Internships</a>
+                        <a href="/scholarships.html" class="dropdown-item">Scholarships</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <main>
         <section id="hero">
@@ -186,5 +193,6 @@
         })(document, 'script');
     </script>
     <script src="script.js"></script>
+    <script src="components/Navbar.js"></script>
 </body>
 </html>

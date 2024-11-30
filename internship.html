@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internship Opportunities</title>
     <link rel="stylesheet" href="internship.css">
+    <link rel="stylesheet" href="components/Navbar.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
@@ -12,30 +13,29 @@
     
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">
-                <div class="logo">Academic Assistant</div>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-logo">
+                Academic Assistant
             </a>
-            <!-- <div class="logo">Academic Assistant</div> -->
-            <ul>
-                <!-- <li><a href="index.html">Home</a></li> -->
-                <li><a href="about.html">About</a></li>
-                <li><a href="mentorship.html">Mentorship</a></li>
-                <li><a href="applications.html">Applications</a></li>
-                <li class="relative">
-                    <button id="resourcesDropdown" aria-haspopup="true" aria-expanded="false">
-                        Resources <i class="fas fa-chevron-down ml-1"></i>
-                    </button>
-                    <ul id="resourcesMenu" class="dropdown-menu" aria-labelledby="resourcesDropdown">
-                        <li><a href="hackathons.html" class="dropdown-item">Hackathons</a></li>
-                        <li><a href="internship.html" class="dropdown-item">Internships</a></li>
-                        <li><a href="scholarships.html" class="dropdown-item">Scholarships</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
+            <button class="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="navbar-links">
+                <a href="/about.html" class="nav-link">About</a>
+                <a href="/mentorship.html" class="nav-link">Mentorship</a>
+                <a href="/applications.html" class="nav-link">Applications</a>
+                <div class="navbar-dropdown">
+                    <a href="/resources.html" class="nav-link">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="/hackathons.html" class="dropdown-item">Hackathons</a>
+                        <a href="/internship.html" class="dropdown-item">Internships</a>
+                        <a href="/scholarships.html" class="dropdown-item">Scholarships</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <main>
         <section id="hero">
@@ -223,5 +223,6 @@
     </footer> -->
 
     <script src="resources.js"></script>
+    <script src="components/Navbar.js"></script>
 </body>
 </html>

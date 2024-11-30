@@ -30,7 +30,7 @@ header.dock {
     background-color: #3498db; /* Optional: Change color to blend with the theme */
 }
 
-nav {
+/* nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,7 +41,7 @@ nav {
 
 nav.shrink {
     font-size: 0.9rem; /* Smaller font size when docked */
-}
+/* } */ */
 
 .logo {
     font-size: 1.2rem; /* Adjust logo size if needed */

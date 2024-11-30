@@ -6,6 +6,7 @@
     <title>Resource Hub</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="components/Navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <style>
         a {
@@ -36,54 +37,10 @@
         background-color: var(--bg-color);
         }
 
-        /* Header and Navigation */
-        header {
-        background-color: #000;
-        padding: 1rem 0;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-        }
-
-        nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-        transition: all 0.3s ease;
-        margin: 0 30px;
-        }
-
-        .logo {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: white;
-        }
-
-        nav ul {
-        display: flex;
-        list-style: none;
-        }
-
-        nav ul li {
-        margin-left: 2rem;
-        position: relative;
-        }
-
-        nav ul li a {
-        color: white;
-        text-decoration: none;
-        transition: color 0.3s ease;
-        font-weight: 600;
-        }
-
-        nav ul li a:hover, nav ul li a.active {
-        color: var(--secondary-color);
-        }
+        
 
         /* Dropdown styles */
-        .dropdown-menu {
+        /* .dropdown-menu {
         display: none;
         position: absolute;
         background-color: white;
@@ -91,17 +48,17 @@
         border-radius: 4px;
         padding: 0.5rem 0;
         z-index: 1000;
-        min-width: 200px; /* Increased width */
+        min-width: 200px; 
         top: 100%;
         left: 50%;
-        transform: translateX(-50%); /* Center the dropdown */
-        margin-top: 0.5rem; /* Add some space between button and dropdown */
-        max-height: 300px; /* Maximum height */
-        overflow-y: auto; /* Allow scrolling if content is too long */
-        }
+        transform: translateX(-50%); 
+        margin-top: 0.5rem; 
+        max-height: 300px; 
+        overflow-y: auto; 
+        } */
 
 
-        .dropdown-menu.show {
+        /* .dropdown-menu.show {
         display: block;
         animation: fadeIn 0.3s ease-out;
         }
@@ -133,7 +90,7 @@
 
         #resourcesDropdown:hover, #resourcesDropdown:focus {
         color: var(--secondary-color);
-        }
+        } */
 
         @keyframes fadeIn {
         from { opacity: 0; transform: translateY(-10px); }
@@ -346,31 +303,31 @@
 
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
-    <header>
-        <nav>
-            <a href="index.html">
-                <div class="logo">Academic Assistant</div>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-logo">
+                Academic Assistant
             </a>
-            <!-- <div class="logo">Academic Assistant</div> -->
-            <ul>
-                <!-- <li><a href="index.html">Home</a></li> -->
-                <li><a href="about.html">About</a></li>
-                <li><a href="mentorship.html">Mentorship</a></li>
-                <li><a href="applications.html">Applications</a></li>
-                <li class="relative">
-                    <button id="resourcesDropdown" aria-haspopup="true" aria-expanded="false">
-                        Resources <i class="fas fa-chevron-down ml-1"></i>
-                    </button>
-                    <ul id="resourcesMenu" class="dropdown-menu" aria-labelledby="resourcesDropdown">
-                        <li><a href="hackathons.html" class="dropdown-item">Hackathons</a></li>
-                        <li><a href="internship.html" class="dropdown-item">Internships</a></li>
-                        <li><a href="scholarships.html" class="dropdown-item">Scholarships</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
+            <button class="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="navbar-links">
+                <a href="/about.html" class="nav-link">About</a>
+                <a href="/mentorship.html" class="nav-link">Mentorship</a>
+                <a href="/applications.html" class="nav-link">Applications</a>
+                <div class="navbar-dropdown">
+                    <a href="/resources.html" class="nav-link">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="/hackathons.html" class="dropdown-item">Hackathons</a>
+                        <a href="/internship.html" class="dropdown-item">Internships</a>
+                        <a href="/scholarships.html" class="dropdown-item">Scholarships</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+  
 
     <main>
         <section id="hero">
@@ -516,5 +473,7 @@
 
 
     </script>
+    <script src="components/Navbar.js"></script>
+    
 </body>
 </html>
