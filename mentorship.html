@@ -6,6 +6,7 @@
     <title>Research Mentorship - Acad Assist</title>
     <link rel="stylesheet" href="mentorship.css">
     <link rel="stylesheet" href="components/Navbar.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         a {
             text-decoration: none;
@@ -140,23 +141,73 @@
             </div>
         </section>
 
-        <section id="apply">
-            <h2>Ready to Start Your Research Journey?</h2>
-            <form id="application-form">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <select required>
-                    <option value="">Select Your Field of Study</option>
-                    <option value="biology">Biology</option>
-                    <option value="chemistry">Chemistry</option>
-                    <option value="physics">Physics</option>
-                    <option value="computer-science">Computer Science</option>
-                    <option value="psychology">Psychology</option>
-                    <option value="other">Other</option>
-                </select>
-                <textarea placeholder="Brief description of your research interests" required></textarea>
-                <button type="submit" class="submit-button">Submit Application</button>
-            </form>
+        <section id="apply" class="bg-gradient-to-br from-blue-50 to-indigo-50 py-16">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Ready to Start Your Research Journey?</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Join our mentorship program and take the first step towards achieving your research goals.</p>
+                
+                <form id="application-form" class="bg-white rounded-lg shadow-xl p-8 space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label for="fullName" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <input 
+                                type="text" 
+                                id="fullName" 
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
+                                placeholder="John Doe"
+                                required
+                            >
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
+                                placeholder="john@example.com"
+                                required
+                            >
+                        </div>
+                    </div>
+        
+                    <div class="space-y-2">
+                        <label for="field" class="block text-sm font-medium text-gray-700">Field of Study</label>
+                        <select 
+                            id="field" 
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
+                            required
+                        >
+                            <option value="">Select Your Field of Study</option>
+                            <option value="biology">Biology</option>
+                            <option value="chemistry">Chemistry</option>
+                            <option value="physics">Physics</option>
+                            <option value="computer-science">Computer Science</option>
+                            <option value="psychology">Psychology</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+        
+                    <div class="space-y-2">
+                        <label for="interests" class="block text-sm font-medium text-gray-700">Research Interests</label>
+                        <textarea 
+                            id="interests" 
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 h-32"
+                            placeholder="Tell us about your research interests and goals..."
+                            required
+                        ></textarea>
+                    </div>
+        
+                    <div class="flex justify-center pt-4">
+                        <button 
+                            type="submit" 
+                            class="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition duration-200"
+                        >
+                            Submit Application
+                        </button>
+                    </div>
+                </form>
+            </div>
         </section>
         </section id="wall-of-fame">
             <div class="container">
