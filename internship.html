@@ -224,5 +224,10 @@
 
     <script src="resources.js"></script>
     <script src="components/Navbar.js"></script>
+    <script type="module">
+        import { loadInternships } from './js/resources.js';
+        document.addEventListener('DOMContentLoaded', loadInternships);
+    </script>
+    
 </body>
 </html>

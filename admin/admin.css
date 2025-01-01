@@ -1,0 +1,63 @@
+/* Admin Dashboard Styles */
+.form-input {
+    @apply w-full p-3 bg-gray-700 rounded-lg border border-gray-600 text-white focus:ring-2 focus:ring-blue-400 focus:border-transparent;
+}
+
+.submit-button {
+    @apply w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300 flex items-center justify-center;
+}
+
+.tab-button {
+    @apply px-6 py-3 text-sm font-medium rounded-lg transition duration-300 flex items-center;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.tab-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.tab-button.active {
+    @apply bg-blue-500 text-white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Message cards */
+.message-card {
+    @apply bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-blue-400 transition duration-300;
+}
+
+.message-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(59, 130, 246, 0.5);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(59, 130, 246, 0.7);
+}

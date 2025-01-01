@@ -52,6 +52,11 @@
 
     <script src="resources.js"></script>
     <script src="components/Navbar.js"></script>
+    <script type="module">
+        import { loadScholarships } from './js/resources.js';
+        document.addEventListener('DOMContentLoaded', loadScholarships);
+    </script>
+    
 
 </body>
 </html>

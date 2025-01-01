@@ -438,5 +438,10 @@
     </footer>
     <script src="applications.js"></script>
     <script src="components/Navbar.js"></script>
+    <script type="module">
+      import { handleContactSubmission } from './js/resources.js';
+      document.querySelector('#contact form').addEventListener('submit', handleContactSubmission);
+  </script>
+  
 </body>
 </html>

@@ -51,5 +51,10 @@
 
     <script src="resources.js"></script>
     <script src="components/Navbar.js"></script>
+    <script type="module">
+        import { loadHackathons } from './js/resources.js';
+        document.addEventListener('DOMContentLoaded', loadHackathons);
+    </script>
+    
 </body>
 </html>
