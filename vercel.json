@@ -8,16 +8,24 @@
     ],
     "routes": [
       {
-        "src": "/(.*)\\.html",
-        "dest": "/$1.html"
+        "src": "/api/(.*)",
+        "dest": "/api/$1"
       },
       {
-        "src": "/(.*)\\.css",
-        "dest": "/$1.css"
+        "src": "/admin",
+        "dest": "/admin/index.html"
+      },
+      {
+        "src": "/admin/(.*)",
+        "dest": "/admin/$1"
       },
       {
         "src": "/(.*)\\.js",
         "dest": "/$1.js"
+      },
+      {
+        "src": "/(.*)\\.css",
+        "dest": "/$1.css"
       },
       {
         "src": "/images/(.*)",
@@ -30,17 +38,6 @@
       {
         "src": "/js/(.*)",
         "dest": "/js/$1"
-      },
-      {
-        "src": "/admin/(.*)",
-        "dest": "/admin/$1"
-      },
-      {
-        "handle": "filesystem"
-      },
-      {
-        "src": "/",
-        "dest": "/index.html"
       },
       {
         "src": "/about",
@@ -73,6 +70,17 @@
       {
         "src": "/contact",
         "dest": "/contact.html"
+      },
+      {
+        "handle": "filesystem"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
       }
-    ]
+    ],
+    "env": {
+      "SUPABASE_URL": "@supabase_url",
+      "SUPABASE_ANON_KEY": "@supabase_anon_key"
+    }
   }
