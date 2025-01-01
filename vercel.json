@@ -1,15 +1,78 @@
 {
-    "rewrites": [
-      { "source": "/", "destination": "/index.html" },
-      { "source": "/about", "destination": "/about.html" },
-      { "source": "/applications", "destination": "/applications.html" },
-      { "source": "/resources", "destination": "/resources.html" },
-      { "source": "/hackathons", "destination": "/hackathons.html" },
-      { "source": "/internship", "destination": "/internship.html" },
-      { "source": "/scholarships", "destination": "/scholarships.html" },
-      { "source": "/mentorship", "destination": "/mentorship.html" },
-      { "source": "/contact", "destination": "/contact.html" }
+    "version": 2,
+    "builds": [
+      {
+        "src": "**",
+        "use": "@vercel/static"
+      }
     ],
-    "cleanUrls": true,
-    "trailingSlash": false
+    "routes": [
+      {
+        "src": "/(.*)\\.html",
+        "dest": "/$1.html"
+      },
+      {
+        "src": "/(.*)\\.css",
+        "dest": "/$1.css"
+      },
+      {
+        "src": "/(.*)\\.js",
+        "dest": "/$1.js"
+      },
+      {
+        "src": "/images/(.*)",
+        "dest": "/images/$1"
+      },
+      {
+        "src": "/components/(.*)",
+        "dest": "/components/$1"
+      },
+      {
+        "src": "/js/(.*)",
+        "dest": "/js/$1"
+      },
+      {
+        "src": "/admin/(.*)",
+        "dest": "/admin/$1"
+      },
+      {
+        "handle": "filesystem"
+      },
+      {
+        "src": "/",
+        "dest": "/index.html"
+      },
+      {
+        "src": "/about",
+        "dest": "/about.html"
+      },
+      {
+        "src": "/applications",
+        "dest": "/applications.html"
+      },
+      {
+        "src": "/resources",
+        "dest": "/resources.html"
+      },
+      {
+        "src": "/hackathons",
+        "dest": "/hackathons.html"
+      },
+      {
+        "src": "/internship",
+        "dest": "/internship.html"
+      },
+      {
+        "src": "/scholarships",
+        "dest": "/scholarships.html"
+      },
+      {
+        "src": "/mentorship",
+        "dest": "/mentorship.html"
+      },
+      {
+        "src": "/contact",
+        "dest": "/contact.html"
+      }
+    ]
   }
