@@ -1,10 +1,15 @@
 {
-    "redirects": [
-        { "source": "/old-route", "destination": "/new-route", "permanent": true }
-],
-"routes": [
-    { "src": "/application", "dest": "/application.html" },
-    { "src": "/about", "dest": "/about.html" },
-    { "src": "/mentorship", "dest": "/mentorship.html" }
-]
-}
+    "rewrites": [
+      { "source": "/", "destination": "/index.html" },
+      { "source": "/about", "destination": "/about.html" },
+      { "source": "/applications", "destination": "/applications.html" },
+      { "source": "/resources", "destination": "/resources.html" },
+      { "source": "/hackathons", "destination": "/hackathons.html" },
+      { "source": "/internship", "destination": "/internship.html" },
+      { "source": "/scholarships", "destination": "/scholarships.html" },
+      { "source": "/mentorship", "destination": "/mentorship.html" },
+      { "source": "/contact", "destination": "/contact.html" }
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false
+  }
