@@ -8,39 +8,46 @@
     ],
     "routes": [
       {
-        "src": "/(.*)\\.html",
-        "dest": "/$1.html"
+        "src": "/admin",
+        "dest": "/admin/index.html"
       },
       {
-        "src": "/(.*)\\.css",
-        "dest": "/$1.css"
-      },
-      {
-        "src": "/(.*)\\.js",
-        "dest": "/$1.js"
+        "src": "/api/(.*)",
+        "dest": "/api/$1"
       },
       {
         "src": "/images/(.*)",
         "dest": "/images/$1"
       },
       {
-        "src": "/components/(.*)",
-        "dest": "/components/$1"
-      },
-      {
         "src": "/js/(.*)",
         "dest": "/js/$1"
+      },
+      {
+        "src": "/components/(.*)",
+        "dest": "/components/$1"
       },
       {
         "src": "/admin/(.*)",
         "dest": "/admin/$1"
       },
       {
-        "handle": "filesystem"
+        "src": "/(.*)\\.js",
+        "headers": {
+          "content-type": "application/javascript"
+        },
+        "dest": "/$1.js"
       },
       {
-        "src": "/",
-        "dest": "/index.html"
+        "src": "/(.*)\\.css",
+        "headers": {
+          "content-type": "text/css"
+        },
+        "dest": "/$1.css"
+      },
+      {
+        "src": "/(.*)\\.html",
+        "dest": "/$1.html"
       },
       {
         "src": "/about",
@@ -73,6 +80,33 @@
       {
         "src": "/contact",
         "dest": "/contact.html"
+      },
+      {
+        "src": "/",
+        "dest": "/index.html"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/404.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "/(.*)",
+        "headers": [
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          },
+          {
+            "key": "X-Frame-Options",
+            "value": "DENY"
+          },
+          {
+            "key": "X-XSS-Protection",
+            "value": "1; mode=block"
+          }
+        ]
       }
     ]
   }
